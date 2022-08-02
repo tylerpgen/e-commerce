@@ -3,6 +3,8 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 const Container = styled.div`
   display: flex;
@@ -40,10 +42,9 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ display: "none" })}
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   margin-top: 10px;
   margin-bottom: 10px;
   ${mobile({ marginTop: "0" })}
@@ -57,9 +58,20 @@ const List = styled.ul`
   flex-wrap: wrap;
 `;
 
-const ListItem = styled.li`
+const StyledLink = styled(Link)`
   width: 50%;
   margin-bottom: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+
+  &:visited {
+    color: black;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Right = styled.div`
@@ -96,11 +108,14 @@ const Footer = () => {
       <Center>
         <Title>Links</Title>
         <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Sneakers</ListItem>
-          <ListItem>Streetwear</ListItem>
-          <ListItem>Accessories</ListItem>
+          <ScrollToTop>
+            <StyledLink to="/">Home</StyledLink>
+            <StyledLink to="/cart">Cart</StyledLink>
+            <StyledLink to="/products">Sneakers</StyledLink>
+            <StyledLink to="/products">Streetwear</StyledLink>
+            <StyledLink to="/products">Accessories</StyledLink>
+            <StyledLink to="/product/:id">Product Page</StyledLink>
+          </ScrollToTop>
         </List>
       </Center>
       <Right>

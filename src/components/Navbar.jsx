@@ -3,9 +3,10 @@ import { Search, ShoppingBagOutlined } from "@mui/icons-material";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  height: 60px;
+  height: 70px;
   ${mobile({ height: "50px" })}
 `;
 const Wrapper = styled.div`
@@ -34,9 +35,25 @@ const Input = styled.input`
   ${mobile({ width: "40px", height: "10px" })}
 `;
 
-const Logo = styled.h1`
+const StyledLink = styled(Link)`
   font-weight: bold;
+  font-size: 35px;
+  text-decoration: none;
+  color: black;
+
+  &:visited {
+    color: black;
+  }
+
   ${mobile({ fontSize: "20px", marginLeft: "5px" })}
+`;
+
+const StyledNavbarLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
 `;
 
 const Center = styled.div`
@@ -70,15 +87,21 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>TripeThreatLA</Logo>
+          <StyledLink to="/">TripleThreatLA</StyledLink>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <StyledNavbarLink to="/register">
+            <MenuItem>Register</MenuItem>
+          </StyledNavbarLink>
+          <StyledNavbarLink to="/login">
+            <MenuItem>Sign In</MenuItem>
+          </StyledNavbarLink>
           <MenuItem>
-            <Badge overlap="rectangular" badgeContent={4} color="primary">
-              <ShoppingBagOutlined />
-            </Badge>
+            <StyledNavbarLink to="/cart">
+              <Badge overlap="rectangular" badgeContent={2} color="primary">
+                <ShoppingBagOutlined />
+              </Badge>
+            </StyledNavbarLink>
           </MenuItem>
         </Right>
       </Wrapper>

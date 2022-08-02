@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 
-const Container = styled.div`
+const Container = styled.div``;
+
+const LoginContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -63,16 +66,19 @@ const Link = styled.a`
 const Login = () => {
   return (
     <Container>
-      <Wrapper>
-        <Title>SIGN IN</Title>
-        <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
-          <Button>LOGIN</Button>
-          <Link>FORGOT PASSWORD?</Link>
-          <Link>CREATE NEW ACCOUNT</Link>
-        </Form>
-      </Wrapper>
+      <Navbar />
+      <LoginContainer>
+        <Wrapper>
+          <Title>SIGN IN</Title>
+          <Form>
+            <Input placeholder="username" />
+            <Input placeholder="password" />
+            <Button>LOGIN</Button>
+            <Link>FORGOT PASSWORD?</Link>
+            <Link>CREATE NEW ACCOUNT</Link>
+          </Form>
+        </Wrapper>
+      </LoginContainer>
     </Container>
   );
 };

@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 
-const Container = styled.div`
+const Container = styled.div``;
+
+const RegisterContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -60,22 +63,25 @@ const Button = styled.button`
 const Register = () => {
   return (
     <Container>
-      <Wrapper>
-        <Title>CREATE AN ACCOUNT</Title>
-        <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
-          <Agreement>
-            By creating an account, I agree to the terms of service of the site,
-            in accordance to the <b>PRIVACY POLICY</b>
-          </Agreement>
-          <Button>CREATE</Button>
-        </Form>
-      </Wrapper>
+      <Navbar />
+      <RegisterContainer>
+        <Wrapper>
+          <Title>CREATE AN ACCOUNT</Title>
+          <Form>
+            <Input placeholder="name" />
+            <Input placeholder="last name" />
+            <Input placeholder="username" />
+            <Input placeholder="email" />
+            <Input placeholder="password" />
+            <Input placeholder="confirm password" />
+            <Agreement>
+              By creating an account, I agree to the terms of service of the
+              site, in accordance to the <b>PRIVACY POLICY</b>
+            </Agreement>
+            <Button>CREATE</Button>
+          </Form>
+        </Wrapper>
+      </RegisterContainer>
     </Container>
   );
 };
