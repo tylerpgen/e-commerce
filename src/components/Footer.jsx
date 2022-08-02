@@ -3,6 +3,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import { mobile } from "../responsive";
+import { largeMobile } from "../responsive";
 import { Link } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
@@ -10,6 +11,7 @@ const Container = styled.div`
   display: flex;
   background-color: #fff7f7;
   ${mobile({ flexDirection: "column" })}
+  ${largeMobile({ flexDirection: "column" })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -26,6 +28,10 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
   display: flex;
+  ${largeMobile({
+    alignItems: "center",
+    justifyContent: "center",
+  })}
 `;
 
 const SocialIcon = styled.div`
@@ -37,6 +43,7 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  ${largeMobile({ fontSize: "50" })}
 `;
 
 const Center = styled.div`
@@ -48,6 +55,7 @@ const Title = styled.h2`
   margin-top: 10px;
   margin-bottom: 10px;
   ${mobile({ marginTop: "0" })}
+  ${largeMobile({ marginTop: "0" })}
 `;
 
 const List = styled.ul`
@@ -77,6 +85,7 @@ const StyledLink = styled(Link)`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  background-color: #eee;
   ${mobile({ backgroundColor: "#eee" })}
 `;
 

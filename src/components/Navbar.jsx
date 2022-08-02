@@ -4,10 +4,12 @@ import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
+import { largeMobile } from "../responsive";
 
 const Container = styled.div`
   height: 70px;
   ${mobile({ height: "50px" })}
+  ${largeMobile({ height: "50px" })}
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
@@ -15,6 +17,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   ${mobile({ padding: "10px 0" })}
+  ${largeMobile({ padding: "10px 0" })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -33,6 +36,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
   border: none;
   ${mobile({ width: "40px", height: "10px" })}
+  ${largeMobile({ width: "40px", height: "10px" })}
 `;
 
 const StyledLink = styled(Link)`
@@ -46,6 +50,7 @@ const StyledLink = styled(Link)`
   }
 
   ${mobile({ fontSize: "20px", marginLeft: "5px" })}
+  ${largeMobile({ fontSize: "20px", marginLeft: "5px", marginTop: "3px" })}
 `;
 
 const StyledNavbarLink = styled(Link)`
@@ -57,8 +62,10 @@ const StyledNavbarLink = styled(Link)`
 `;
 
 const Center = styled.div`
+  display: flex;
   flex: 1;
   text-align: center;
+  justify-content: center;
 `;
 
 const Right = styled.div`
@@ -67,6 +74,7 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex: 3, justifyContent: "center" })}
+  ${largeMobile({ flex: 3, justifyContent: "center" })}
 `;
 
 const MenuItem = styled.div`
@@ -74,6 +82,7 @@ const MenuItem = styled.div`
   cursor: pointer;
   margin-left: 25px;
   ${mobile({ fontSize: "10px", marginLeft: "5px" })}
+  ${largeMobile({ fontSize: "15px", marginLeft: "5px" })}
 `;
 
 const Navbar = () => {

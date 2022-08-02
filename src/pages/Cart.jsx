@@ -4,12 +4,14 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
+import { largeMobile } from "../responsive";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
   ${mobile({ padding: "10px" })}
+  ${largeMobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
@@ -26,6 +28,7 @@ const Top = styled.div`
 
 const TopTexts = styled.div`
   ${mobile({ display: "none" })}
+  ${largeMobile({ display: "none" })}
 `;
 
 const TopText = styled.span`
@@ -48,6 +51,7 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
+  ${largeMobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -59,6 +63,7 @@ const Product = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   ${mobile({ flexDirection: "column" })}
+  ${largeMobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -100,6 +105,7 @@ const ProductAmount = styled.div`
   font-size: 20px;
   margin: 5px;
   ${mobile({ margin: "5px 15px" })}
+  ${largeMobile({ margin: "5px 15px" })}
 `;
 
 const ProductPrice = styled.div`
@@ -107,6 +113,7 @@ const ProductPrice = styled.div`
   font-weight: 300;
   margin-bottom: 20px;
   ${mobile({ marginTop: "20px", marginBottom: "10px" })}
+  ${largeMobile({ marginTop: "20px", marginBottom: "10px" })}
 `;
 
 const Hr = styled.hr`

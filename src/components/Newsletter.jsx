@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Send } from "@material-ui/icons";
 import { mobile } from "../responsive";
+import { largeMobile } from "../responsive";
 
 const Container = styled.div`
   height: 60vh;
@@ -9,17 +10,21 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  ${mobile({ display: "none" })}
+  ${largeMobile({ display: "none" })}
 `;
 const Title = styled.h1`
   font-size: 70px;
   margin-bottom: 20px;
   ${mobile({ fontSize: "60px" })}
+  ${largeMobile({ fontSize: "75px" })}
 `;
 const Desc = styled.div`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 20px;
   ${mobile({ textAlign: "center", fontSize: "18px" })}
+  ${largeMobile({ textAlign: "center", fontSize: "25px" })}
 `;
 
 const InputContainer = styled.div`
@@ -30,6 +35,7 @@ const InputContainer = styled.div`
   justify-content: space-between;
   border: 1px solid lightgray;
   ${mobile({ width: "90%", height: "40px" })}
+  ${largeMobile({ width: "90%", height: "40px", backgroundColor: "red" })}
 `;
 const Input = styled.input`
   border: none;
@@ -43,6 +49,7 @@ const Button = styled.button`
   background-color: red;
   color: white;
   cursor: pointer;
+  ${largeMobile({ flex: "1" })}
 `;
 
 const Newsletter = () => {

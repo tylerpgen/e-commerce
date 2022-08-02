@@ -6,6 +6,7 @@ import Newsletter from "../components/Newsletter";
 import Harrow1 from "../assets/images/harrow1.png";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
+import { largeMobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -13,6 +14,7 @@ const Wrapper = styled.div`
   padding: 50px;
   display: flex;
   ${mobile({ padding: "10px", flexDirection: "column" })}
+  ${largeMobile({ padding: "10px", flexDirection: "column" })}
 `;
 
 const ImageContainer = styled.div`
@@ -24,18 +26,21 @@ const Image = styled.img`
   height: 80vh;
   object-fit: contain;
   ${mobile({ height: "40vh" })}
+  ${largeMobile({ height: "40vh" })}
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0 50px;
   ${mobile({ padding: "10px" })}
+  ${largeMobile({ padding: "10px" })}
 `;
 
 const Title = styled.h1`
   font-weight: 400;
   font-size: 40px;
   ${mobile({ fontSize: "35px" })}
+  ${largeMobile({ fontSize: "35px" })}
 `;
 
 const Desc = styled.p`
@@ -81,6 +86,7 @@ const AddContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   ${mobile({ width: "100%" })}
+  ${largeMobile({ width: "100%" })}
 `;
 
 const AmountContainer = styled.div`
@@ -115,8 +121,8 @@ const Button = styled.button`
 const Product = () => {
   return (
     <Container>
-      <Navbar />
       <Announcement />
+      <Navbar />
       <Wrapper>
         <ImageContainer>
           <Image src={Harrow1} />

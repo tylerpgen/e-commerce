@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { largeMobile } from "../responsive";
 
 const Container = styled.div`
   flex: 1;
@@ -13,6 +14,7 @@ const Image = styled.img`
   height: 100%;
   object-fit: cover;
   ${mobile({ height: "30vh" })}
+  ${largeMobile({ height: "30vh" })}
 `;
 const Info = styled.div`
   position: absolute;
@@ -25,11 +27,13 @@ const Info = styled.div`
   width: 100%;
   height: 100%;
   ${mobile({ top: "60px" })}
+  ${largeMobile({ top: "80px" })}
 `;
 const Title = styled.h1`
   color: white;
   margin-bottom: 20px;
   ${mobile({ fontSize: "20px", marginBottom: "5px" })}
+  ${largeMobile({ fontSize: "20px", marginBottom: "5px" })}
 `;
 const Button = styled.button`
   border: none;
@@ -41,6 +45,7 @@ const Button = styled.button`
   font-size: 1.3em;
   font-weight: 900;
   ${mobile({ fontSize: "12px", width: "90px" })}
+  ${largeMobile({ fontSize: "12px", width: "90px" })}
 `;
 
 const CategoryItem = ({ item }) => {
