@@ -16,15 +16,11 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 70px;
   margin-bottom: 20px;
-  ${mobile({ fontSize: "60px" })}
-  ${largeMobile({ fontSize: "75px" })}
 `;
 const Desc = styled.div`
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 20px;
-  ${mobile({ textAlign: "center", fontSize: "18px" })}
-  ${largeMobile({ textAlign: "center", fontSize: "25px" })}
 `;
 
 const InputContainer = styled.div`
@@ -34,8 +30,6 @@ const InputContainer = styled.div`
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
-  ${mobile({ width: "90%", height: "40px" })}
-  ${largeMobile({ width: "90%", height: "40px", backgroundColor: "red" })}
 `;
 const Input = styled.input`
   border: none;
@@ -49,7 +43,6 @@ const Button = styled.button`
   background-color: red;
   color: white;
   cursor: pointer;
-  ${largeMobile({ flex: "1" })}
 `;
 
 const Newsletter = () => {

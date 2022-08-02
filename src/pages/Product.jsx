@@ -7,6 +7,7 @@ import Harrow1 from "../assets/images/harrow1.png";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
 import { largeMobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -15,6 +16,25 @@ const Wrapper = styled.div`
   display: flex;
   ${mobile({ padding: "10px", flexDirection: "column" })}
   ${largeMobile({ padding: "10px", flexDirection: "column" })}
+`;
+
+const TopButton = styled.button`
+  padding: 10px;
+  font-weight: 600;
+  width: 100px;
+  cursor: pointer;
+  border: ${(props) => props.type === "filled" && "none"};
+  background-color: ${(props) =>
+    props.type === "filled" ? "black" : "transparent"};
+  color: ${(props) => props.type === "filled" && "white"};
+  ${mobile({
+    padding: "0px 3px",
+    fontSize: "15px",
+  })}
+  ${largeMobile({
+    padding: "0px 3px",
+    fontSize: "15px",
+  })}
 `;
 
 const ImageContainer = styled.div`
@@ -124,6 +144,9 @@ const Product = () => {
       <Announcement />
       <Navbar />
       <Wrapper>
+        <Link to="/products">
+          <TopButton>BACK</TopButton>
+        </Link>
         <ImageContainer>
           <Image src={Harrow1} />
         </ImageContainer>
@@ -153,7 +176,9 @@ const Product = () => {
               <Amount>4</Amount>
               <Add />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Link to="/cart">
+              <Button>ADD TO CART</Button>
+            </Link>
           </AddContainer>
         </InfoContainer>
       </Wrapper>

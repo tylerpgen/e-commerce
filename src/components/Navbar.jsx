@@ -30,13 +30,14 @@ const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px;
+  padding: 0;
+  line-height: 3em;
+  ${mobile({ display: "none" })}
+  ${largeMobile({ display: "none" })}
 `;
 
 const Input = styled.input`
   border: none;
-  ${mobile({ width: "40px", height: "10px" })}
-  ${largeMobile({ width: "40px", height: "10px" })}
 `;
 
 const StyledLink = styled(Link)`
@@ -49,8 +50,8 @@ const StyledLink = styled(Link)`
     color: black;
   }
 
-  ${mobile({ fontSize: "20px", marginLeft: "5px" })}
-  ${largeMobile({ fontSize: "20px", marginLeft: "5px", marginTop: "3px" })}
+  ${mobile({ fontSize: "20px", marginLeft: "0" })}
+  ${largeMobile({ fontSize: "25px", marginLeft: "0", marginTop: "0" })}
 `;
 
 const StyledNavbarLink = styled(Link)`
@@ -81,7 +82,7 @@ const MenuItem = styled.div`
   font-size: 18px;
   cursor: pointer;
   margin-left: 25px;
-  ${mobile({ fontSize: "10px", marginLeft: "5px" })}
+  ${mobile({ fontSize: "15px", marginLeft: "5px" })}
   ${largeMobile({ fontSize: "15px", marginLeft: "5px" })}
 `;
 
@@ -103,7 +104,7 @@ const Navbar = () => {
             <MenuItem>Register</MenuItem>
           </StyledNavbarLink>
           <StyledNavbarLink to="/login">
-            <MenuItem>Sign In</MenuItem>
+            <MenuItem>Login</MenuItem>
           </StyledNavbarLink>
           <MenuItem>
             <StyledNavbarLink to="/cart">

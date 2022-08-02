@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { mobile } from "../responsive";
 import { largeMobile } from "../responsive";
 
@@ -54,7 +55,9 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
+        <Link to="/products">
+          <Button>SHOP NOW</Button>
+        </Link>
       </Info>
     </Container>
   );

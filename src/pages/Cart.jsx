@@ -5,11 +5,14 @@ import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
 import { largeMobile } from "../responsive";
+import { Link } from "react-router-dom";
+import Newsletter from "../components/Newsletter";
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 20px;
+  background-color: #fff;
   ${mobile({ padding: "10px" })}
   ${largeMobile({ padding: "10px" })}
 `;
@@ -24,17 +27,6 @@ const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-`;
-
-const TopTexts = styled.div`
-  ${mobile({ display: "none" })}
-  ${largeMobile({ display: "none" })}
-`;
-
-const TopText = styled.span`
-  margin-right: 50px;
-  text-decoration: underline;
-  cursor: pointer;
 `;
 
 const TopButton = styled.button`
@@ -169,11 +161,9 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR CART</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
-          <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
-          </TopTexts>
-          <TopButton type="filled">CHECK OUT</TopButton>
+          <Link to="/products">
+            <TopButton>CONTINUE SHOPPING</TopButton>
+          </Link>
         </Top>
         <Bottom>
           <Info>
@@ -245,6 +235,7 @@ const Cart = () => {
           </Summary>
         </Bottom>
       </Wrapper>
+      <Newsletter />
       <Footer />
     </Container>
   );
