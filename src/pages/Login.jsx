@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, smallMobile, largeMobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -23,6 +22,7 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   ${mobile({ width: "75%" })}
+  ${smallMobile({ width: "75%" })}
   ${largeMobile({ width: "75%" })}
 `;
 
@@ -44,7 +44,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  width: 20%;
+  width: fit-content;
   font-size: 20px;
   border: none;
   padding: 5px;
@@ -52,6 +52,7 @@ const Button = styled.button`
   background-color: lightgray;
   cursor: pointer;
   ${mobile({ width: "90px" })}
+  ${smallMobile({ width: "90px" })}
   ${largeMobile({ width: "90px" })}
 
   &:hover {

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Send } from "@material-ui/icons";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, largeMobile, smallMobile } from "../responsive";
 
 const Container = styled.div`
   height: 60vh;
@@ -12,6 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   ${mobile({ display: "none" })}
   ${largeMobile({ display: "none" })}
+  ${smallMobile({ display: "none" })}
 `;
 const Title = styled.h1`
   font-size: 70px;

@@ -3,8 +3,7 @@ import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, smallMobile, largeMobile } from "../responsive";
 import { Link } from "react-router-dom";
 import Newsletter from "../components/Newsletter";
 
@@ -14,6 +13,7 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: #fff;
   ${mobile({ padding: "10px" })}
+  ${smallMobile({ padding: "10px" })}
   ${largeMobile({ padding: "10px" })}
 `;
 
@@ -43,6 +43,7 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
+  ${smallMobile({ flexDirection: "column" })}
   ${largeMobile({ flexDirection: "column" })}
 `;
 
@@ -55,6 +56,7 @@ const Product = styled.div`
   justify-content: space-between;
   margin-bottom: 20px;
   ${mobile({ flexDirection: "column" })}
+  ${smallMobile({ flexDirection: "column" })}
   ${largeMobile({ flexDirection: "column" })}
 `;
 
@@ -97,6 +99,7 @@ const ProductAmount = styled.div`
   font-size: 20px;
   margin: 5px;
   ${mobile({ margin: "5px 15px" })}
+  ${smallMobile({ margin: "5px 15px" })}
   ${largeMobile({ margin: "5px 15px" })}
 `;
 
@@ -105,6 +108,7 @@ const ProductPrice = styled.div`
   font-weight: 300;
   margin-bottom: 20px;
   ${mobile({ marginTop: "20px", marginBottom: "10px" })}
+  ${smallMobile({ marginTop: "20px", marginBottom: "10px" })}
   ${largeMobile({ marginTop: "20px", marginBottom: "10px" })}
 `;
 

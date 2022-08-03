@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, smallMobile, largeMobile } from "../responsive";
 
 const Container = styled.div``;
 
@@ -23,6 +22,7 @@ const Wrapper = styled.div`
   padding: 20px;
   background-color: white;
   ${mobile({ width: "75%" })}
+  ${smallMobile({ width: "75%", height: "90%" })}
   ${largeMobile({ width: "75%" })}
 `;
 
@@ -41,6 +41,7 @@ const Input = styled.input`
   min-width: 40%;
   margin: 20px 10px 0 0;
   padding: 10px;
+  ${smallMobile({ margin: "10px 10px 0 0" })}
 `;
 
 const Agreement = styled.span`
@@ -56,7 +57,9 @@ const Button = styled.button`
   background-color: lightgray;
   cursor: pointer;
   ${mobile({ width: "90px" })}
+  ${smallMobile({ width: "90px" })}
   ${largeMobile({ width: "90px" })}
+
 
   &:hover {
     background-color: red;

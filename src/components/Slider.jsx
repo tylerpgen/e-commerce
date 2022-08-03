@@ -5,8 +5,7 @@ import {
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, smallMobile, largeMobile } from "../responsive";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
@@ -18,6 +17,7 @@ const Container = styled.div`
   margin-top: 10px;
   ${mobile({ display: "none" })}
   ${largeMobile({ display: "none" })}
+  ${smallMobile({ display: "none" })}
 `;
 
 const Arrow = styled.div`
@@ -54,7 +54,7 @@ const Slide = styled.div`
   background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
-  height: 100%;
+  height: 80%;
   flex: 1;
 `;
 

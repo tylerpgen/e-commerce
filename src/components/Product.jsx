@@ -5,6 +5,7 @@ import {
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
+import { smallMobile } from "../responsive";
 
 const Info = styled.div`
   opacity: 0;
@@ -26,11 +27,13 @@ const Container = styled.div`
   flex: 1;
   margin: 5px;
   min-height: 350px;
-  min-width: 380px;
+  min-width: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+
+  ${smallMobile({ minWidth: "300px", maxWidth: "350px" })}
 
   &:hover ${Info} {
     opacity: 1;
@@ -44,6 +47,7 @@ const Image = styled.img`
 `;
 
 const StyledLink = styled(Link)`
+  color: black;
   &:visited {
     color: black;
   }

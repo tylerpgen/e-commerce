@@ -5,8 +5,7 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Harrow1 from "../assets/images/harrow1.png";
 import { Add, Remove } from "@mui/icons-material";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, smallMobile, largeMobile } from "../responsive";
 import { Link } from "react-router-dom";
 
 const Container = styled.div``;
@@ -15,6 +14,7 @@ const Wrapper = styled.div`
   padding: 50px;
   display: flex;
   ${mobile({ padding: "10px", flexDirection: "column" })}
+  ${smallMobile({ padding: "10px", flexDirection: "column" })}
   ${largeMobile({ padding: "10px", flexDirection: "column" })}
 `;
 
@@ -28,6 +28,10 @@ const TopButton = styled.button`
     props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
   ${mobile({
+    padding: "0px 3px",
+    fontSize: "15px",
+  })}
+  ${smallMobile({
     padding: "0px 3px",
     fontSize: "15px",
   })}
@@ -46,6 +50,7 @@ const Image = styled.img`
   height: 80vh;
   object-fit: contain;
   ${mobile({ height: "40vh" })}
+  ${smallMobile({ height: "40vh" })}
   ${largeMobile({ height: "40vh" })}
 `;
 
@@ -53,6 +58,7 @@ const InfoContainer = styled.div`
   flex: 1;
   padding: 0 50px;
   ${mobile({ padding: "10px" })}
+  ${smallMobile({ padding: "10px" })}
   ${largeMobile({ padding: "10px" })}
 `;
 
@@ -60,6 +66,7 @@ const Title = styled.h1`
   font-weight: 400;
   font-size: 40px;
   ${mobile({ fontSize: "35px" })}
+  ${smallMobile({ fontSize: "35px" })}
   ${largeMobile({ fontSize: "35px" })}
 `;
 
@@ -106,6 +113,7 @@ const AddContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   ${mobile({ width: "100%" })}
+  ${smallMobile({ width: "100%" })}
   ${largeMobile({ width: "100%" })}
 `;
 

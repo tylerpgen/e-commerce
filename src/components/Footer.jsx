@@ -2,8 +2,7 @@ import styled from "styled-components";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import { mobile } from "../responsive";
-import { largeMobile } from "../responsive";
+import { mobile, smallMobile, largeMobile } from "../responsive";
 import { Link } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
@@ -11,6 +10,7 @@ const Container = styled.div`
   display: flex;
   background-color: #fff7f7;
   ${mobile({ flexDirection: "column" })}
+  ${smallMobile({ flexDirection: "column" })}
   ${largeMobile({ flexDirection: "column" })}
 `;
 const Left = styled.div`
@@ -28,6 +28,14 @@ const Desc = styled.p`
 
 const SocialContainer = styled.div`
   display: flex;
+  ${smallMobile({
+    alignItems: "center",
+    justifyContent: "center",
+  })};
+  ${mobile({
+    alignItems: "center",
+    justifyContent: "center",
+  })};
   ${largeMobile({
     alignItems: "center",
     justifyContent: "center",
@@ -43,7 +51,15 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  ${largeMobile({ fontSize: "50" })}
+`;
+
+const StyledLogoLink = styled.a`
+  color: red;
+  cursor: pointer;
+
+  &:visited {
+    color: red;
+  }
 `;
 
 const Center = styled.div`
@@ -55,6 +71,7 @@ const Title = styled.h2`
   margin-top: 10px;
   margin-bottom: 10px;
   ${mobile({ marginTop: "0" })}
+  ${smallMobile({ marginTop: "0" })}
   ${largeMobile({ marginTop: "0" })}
 `;
 
@@ -107,10 +124,22 @@ const Footer = () => {
         </Desc>
         <SocialContainer>
           <SocialIcon>
-            <TwitterIcon />
+            <StyledLogoLink
+              href="https://www.instagram.com/tylerpgen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <TwitterIcon />
+            </StyledLogoLink>
           </SocialIcon>
           <SocialIcon>
-            <InstagramIcon />
+            <StyledLogoLink
+              href="https://www.instagram.com/tylerpgen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon />
+            </StyledLogoLink>
           </SocialIcon>
         </SocialContainer>
       </Left>
