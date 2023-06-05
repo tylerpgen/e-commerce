@@ -5,8 +5,10 @@ import { mobile, smallMobile, largeMobile } from "../responsive";
 const Container = styled.div``;
 
 const RegisterContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url("https://wallpaperaccess.com/full/746416.jpg") center;
   display: flex;
