@@ -6,10 +6,14 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Announcement from "./components/Announcement";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <Router>
+      <Announcement />
+      <Navbar />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/products" exact element={<ProductList />} />

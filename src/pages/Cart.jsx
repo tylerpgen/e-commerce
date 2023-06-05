@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
-import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile, smallMobile, largeMobile } from "../responsive";
@@ -34,8 +32,7 @@ const TopButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   border: ${(props) => props.type === "filled" && "none"};
-  background-color: ${(props) =>
-    props.type === "filled" ? "black" : "transparent"};
+  background-color: ${(props) => (props.type === "filled" ? "black" : "transparent")};
   color: ${(props) => props.type === "filled" && "white"};
 `;
 
@@ -160,8 +157,6 @@ const Button = styled.button`
 const Cart = () => {
   return (
     <Container>
-      <Announcement />
-      <Navbar />
       <Wrapper>
         <Title>YOUR CART</Title>
         <Top>
