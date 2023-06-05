@@ -11,13 +11,18 @@ const Container = styled.div`
   justify-content: center;
   font-size: 2em;
   font-weight: 900;
+  //Using props for mobile responsive CSS
   ${mobile({ fontSize: "25px" })}
   ${largeMobile({ fontSize: "25px" })}
   ${smallMobile({ fontSize: "25px" })}
 `;
 
 const Announcement = () => {
-  return <Container>FREE Shipping SITEWIDE!</Container>;
+  return (
+    <Container>
+      <p>FREE Shipping SITEWIDE!</p>
+    </Container>
+  );
 };
 
 export default Announcement;
