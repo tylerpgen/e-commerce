@@ -7,10 +7,7 @@ const Container = styled.div``;
 const RegisterContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url("https://wallpaperaccess.com/full/746416.jpg") center;
   display: flex;
   align-items: center;
@@ -69,7 +66,6 @@ const Button = styled.button`
 const Register = () => {
   return (
     <Container>
-      <Navbar />
       <RegisterContainer>
         <Wrapper>
           <Title>CREATE AN ACCOUNT</Title>
@@ -81,8 +77,8 @@ const Register = () => {
             <Input placeholder="password" />
             <Input placeholder="confirm password" />
             <Agreement>
-              By creating an account, I agree to the terms of service of the
-              site, in accordance to the <b>PRIVACY POLICY</b>
+              By creating an account, I agree to the terms of service of the site, in accordance to the{" "}
+              <b>PRIVACY POLICY</b>
             </Agreement>
             <Button>CREATE</Button>
           </Form>

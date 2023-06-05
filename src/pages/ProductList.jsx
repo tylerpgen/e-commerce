@@ -54,8 +54,6 @@ const Option = styled.option``;
 const ProductList = () => {
   return (
     <Container>
-      <Announcement />
-      <Navbar />
       <Title>Sneakers</Title>
       <FilterContainer>
         <Filter>

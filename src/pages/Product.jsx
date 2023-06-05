@@ -24,8 +24,7 @@ const TopButton = styled.button`
   width: 100px;
   cursor: pointer;
   border: ${(props) => props.type === "filled" && "none"};
-  background-color: ${(props) =>
-    props.type === "filled" ? "black" : "transparent"};
+  background-color: ${(props) => (props.type === "filled" ? "black" : "transparent")};
   color: ${(props) => props.type === "filled" && "white"};
   ${mobile({
     padding: "0px 3px",
@@ -149,8 +148,6 @@ const Button = styled.button`
 const Product = () => {
   return (
     <Container>
-      <Announcement />
-      <Navbar />
       <Wrapper>
         <Link to="/products">
           <TopButton>BACK</TopButton>
@@ -161,10 +158,9 @@ const Product = () => {
         <InfoContainer>
           <Title>Miya Mask x HarrowNumen Collab Hoodie</Title>
           <Desc>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil
-            soluta est quasi sit, voluptas asperiores enim possimus beatae
-            eveniet libero dignissimos saepe quisquam totam fugiat voluptatum
-            iure ad id?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, nihil soluta est quasi sit, voluptas
+            asperiores enim possimus beatae eveniet libero dignissimos saepe quisquam totam fugiat voluptatum iure ad
+            id?
           </Desc>
           <Price>$50</Price>
           <FilterContainer>
