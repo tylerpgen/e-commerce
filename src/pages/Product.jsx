@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Harrow1 from "../assets/images/harrow1.png";
 import { Add, Remove } from "@mui/icons-material";
