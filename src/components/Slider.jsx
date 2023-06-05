@@ -1,7 +1,4 @@
-import {
-  ArrowBackIosOutlined,
-  ArrowForwardIosOutlined,
-} from "@material-ui/icons";
+import { ArrowBackIosOutlined, ArrowForwardIosOutlined } from "@material-ui/icons";
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
@@ -15,6 +12,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   margin-top: 10px;
+  // In mobile view the Slider is hidden
   ${mobile({ display: "none" })}
   ${largeMobile({ display: "none" })}
   ${smallMobile({ display: "none" })}
